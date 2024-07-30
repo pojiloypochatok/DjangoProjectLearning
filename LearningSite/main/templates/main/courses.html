@@ -1,7 +1,8 @@
 {% extends 'main/base.html' %}
+{% load static %}
+
 
 {% block content %}
-<!-- bradcam_area_end  -->
 
 <!-- popular_program_area_start  -->
 <div class="popular_program_area section__padding program__page">
@@ -19,7 +20,7 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="single__program">
                             <div class="program_thumb">
-                                <img alt="" src="img/program/1.png">
+                                <img alt="" src="{% static 'main/img/program/1.png' %}">
                             </div>
                             <div class="program__content">
                                 <span>Python</span>
@@ -32,7 +33,7 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="single__program">
                             <div class="program_thumb">
-                                <img alt="" src="img/program/2.png">
+                                <img alt="" src="{% static 'main/img/program/2.png' %}">
                             </div>
                             <div class="program__content">
                                 <span>Java</span>
@@ -45,7 +46,7 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="single__program">
                             <div class="program_thumb">
-                                <img alt="" src="img/program/3.png">
+                                <img alt="" src="{% static 'main/img/program/3.png' %}">
                             </div>
                             <div class="program__content">
                                 <span>Front-End</span>
