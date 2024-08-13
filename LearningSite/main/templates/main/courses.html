@@ -10,53 +10,29 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="section_title text-center">
-                    <h3>Popular Program</h3>
+                    <h3>{{ title }}</h3>
                 </div>
             </div>
         </div>
         <div class="tab-content" id="nav-tabContent">
             <div aria-labelledby="nav-home-tab" class="tab-pane fade show active" id="nav-home" role="tabpanel">
                 <div class="row">
+                    {% for category in categories %}
                     <div class="col-lg-4 col-md-6">
                         <div class="single__program">
                             <div class="program_thumb">
-                                <img alt="" src="{% static 'main/img/program/1.png' %}">
+                                <img alt="" src="{{ category.image }}">
                             </div>
                             <div class="program__content">
                                 <span>Python</span>
-                                <h4>Python backend developer</h4>
+                                <h4>{{ category.name }}</h4>
                                 <p>Get start in IT, in most popular way.</p>
                                 <a class="boxed-btn5" href="#">PLACE FOR DATA!!!</a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="single__program">
-                            <div class="program_thumb">
-                                <img alt="" src="{% static 'main/img/program/2.png' %}">
-                            </div>
-                            <div class="program__content">
-                                <span>Java</span>
-                                <h4>Java developer</h4>
-                                <p>Get start in IT, in most popular way.</p>
-                                <a class="boxed-btn5" href="#">PLACE FOR DATA!!!</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="single__program">
-                            <div class="program_thumb">
-                                <img alt="" src="{% static 'main/img/program/3.png' %}">
-                            </div>
-                            <div class="program__content">
-                                <span>Front-End</span>
-                                <h4>HTML, CSS front-end developer</h4>
-                                <p>Get start in IT, in most popular way.</p>
-                                <a class="boxed-btn5" href="#">PLACE FOR DATA!!!</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                    {% endfor %}
+
             </div>
         </div>
     </div>
