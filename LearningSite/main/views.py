@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from goods.models import Categories, Products
 
+
 # Create your views here.
 
 def index(request):
@@ -8,9 +9,7 @@ def index(request):
 
 
 def courses(request):
-
     categories = Categories.objects.all()
-
 
     context = {
         'title': 'Choose Your Side!',
@@ -26,3 +25,12 @@ def backend(request):
         'products': products,
     }
     return render(request, 'main/backend.html', context)
+
+
+def frontend(request):
+    products = Products.objects.filter(category__name='Frontend')
+    context = {
+        'title': 'Frontend Development',
+        'products': products,
+    }
+    return render(request, 'main/frontend.html', context)

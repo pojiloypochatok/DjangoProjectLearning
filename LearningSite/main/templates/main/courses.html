@@ -20,14 +20,16 @@
                     {% for category in categories %}
                     <div class="col-lg-4 col-md-6">
                         <div class="single__program">
+                            {% if category.image %}
                             <div class="program_thumb">
-                                <img alt="" src="{{ category.image }}">
+                                <img alt="" src= "{{ category.image.url }}">
                             </div>
+                            {% endif %}
                             <div class="program__content">
-                                <span>Python</span>
+                                <span>{{ category.span }}</span>
                                 <h4>{{ category.name }}</h4>
-                                <p>Get start in IT, in most popular way.</p>
-                                <a class="boxed-btn5" href="#">PLACE FOR DATA!!!</a>
+                                <p>{{ category.description }}</p>
+                                <a class="boxed-btn5" href="{{ category.slug }}">Continue</a>
                             </div>
                         </div>
                     </div>
