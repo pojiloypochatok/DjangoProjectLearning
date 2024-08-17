@@ -1,6 +1,6 @@
 {% extends 'main/base.html' %}
 {% load static %}
-
+{% load goods_tags %}
 
 {% block content %}
 
@@ -17,6 +17,7 @@
         <div class="tab-content" id="nav-tabContent">
             <div aria-labelledby="nav-home-tab" class="tab-pane fade show active" id="nav-home" role="tabpanel">
                 <div class="row">
+                    {% tag_categories as categories %}
                     {% for category in categories %}
                     <div class="col-lg-4 col-md-6">
                         <div class="single__program">

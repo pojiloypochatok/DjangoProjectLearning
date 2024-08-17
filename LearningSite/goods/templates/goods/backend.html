@@ -29,7 +29,7 @@
                                 <span>Python</span>
                                 <h4>{{ product.name }}</h4>
                                 <p>{{ product.description }}</p>
-                                <a class="boxed-btn5" href="#">{{ product.price }}$</a>
+                                <a class="boxed-btn5" href={% url "goods:product" product.slug %}>{{ product.price }}$</a>
                             </div>
                         </div>
                     </div>
