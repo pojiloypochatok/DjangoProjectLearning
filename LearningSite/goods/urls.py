@@ -12,6 +12,7 @@ urlpatterns = [
     path('backend', views.backend, name='backend'),
     path('frontend', views.frontend, name='frontend'),
     path("product/<slug:product_slug>/", views.product, name='product'),
+    path("search/", views.search, name='search'),
 ]
 
 

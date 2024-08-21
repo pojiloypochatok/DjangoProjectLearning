@@ -1,5 +1,7 @@
 {% load static %}
 {{ '<' }}{{ '!DOCTYPE html>' }}
+{% load goods_tags %}
+
 <html class="js" lang="en">
 <head>
     <meta charset="utf-8">
@@ -58,11 +60,17 @@
                                             <li><a href="#">My Courses </a></li>
                                             <li><a href="#">Basket </a></li>
                                         </ul>
+                                        </li>
+                                        </ul>
+                                        <form class="d-flex" role="search" action= "{% url 'goods:search' %}" method = "get">
+                                            <input type="search" name="q" placeholder="Search on site" id="id_q">
+                                        </form>
                                     </nav>
                                 </div>
                             </div>
                         </div>
                     </div>
+
                     <div class="col-12">
                         <div class="mobile_menu d-block d-lg-none"></div>
                     </div>
