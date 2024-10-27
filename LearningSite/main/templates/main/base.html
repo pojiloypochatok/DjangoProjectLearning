@@ -57,8 +57,11 @@
                                         <ul id="navigation">
                                             <li><a href="{% url 'main:homepage' %}">home</a></li>
                                             <li><a href="{% url 'goods:courses' %}">Courses</a></li>
-                                            <li><a href="#"> </a></li>
+                                            <li><a href="{% url 'users:profile' %}">Profile</a></li>
                                             <li><a href="#">Basket </a></li>
+                                            {% if request.user.is_authenticated %}
+                                            <li><a href="{% url 'users:logout' %} ">Logout </a></li>
+                                            {% endif %}
                                         </ul>
                                         </li>
                                         </ul>
